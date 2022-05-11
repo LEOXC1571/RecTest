@@ -1,0 +1,12 @@
+## dataset arguments
+# field_separator: '/t'
+# seq_separator: ' '
+'USER_ID_FIELD': 'user_id'
+'ITEM_ID_FIELD': 'item_id' # 'tag_id
+'TAG_ID_FIELD' : 'tag_id'
+# RATING_FIELD:
+# TIME_FIELD:
+# seq_len: 1
+
+'load_col':
+  'inter': [ 'user_id', 'item_id', 'tag_id' ]
