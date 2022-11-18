@@ -1,6 +1,6 @@
 ## general arguments
 #MODEL_TYPE: 7
-gpu_id: 1
+gpu_id: 0
 user_gpu: True
 seed: 2022
 reproducibility: True

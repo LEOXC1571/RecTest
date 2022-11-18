@@ -13,11 +13,8 @@ from recbole.data import data_preparation, save_split_dataloaders
 from recbole.utils import init_logger, get_trainer, init_seed, set_color
 
 from model import model_name_map
-from data.dataset import TagBasedDataset
 from recbole.data.dataset import Dataset
 
-def objective_run():
-    pass
 
 def run(model=None, dataset=None, saved=False):
     current_path = os.path.dirname(os.path.realpath(__file__))
@@ -38,8 +35,6 @@ def run(model=None, dataset=None, saved=False):
     logger = getLogger()
     logger.info(config)
 
-    # dataset filtering
-    # dataset = TagBasedDataset(config)
     dataset = Dataset(config)
     if config['save_dataset']:
         dataset.save()
@@ -79,7 +74,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, action='store', help='model_name')
     parser.add_argument('--dataset', type=str, action='store', help='dataset name')
-    parser.add_argument('--save', action='store_true', help='save result', default=False)
+    parser.add_argument('--save', action='store_true', help='save result')
     args, unknown = parser.parse_known_args()
 
     model_name = args.model

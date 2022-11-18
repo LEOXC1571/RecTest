@@ -6,7 +6,6 @@
 
 from recbole.model.general_recommender import Pop, BPR
 from .lightgcn import LightGCN
-from .dgcf_ref import DGCF
 from .ngcf import NGCF
 from .sgl import SGL
 from .simgcl import SimGCL
@@ -21,7 +20,6 @@ model_name_map = {
     'BPR': BPR,
     'LGCN': LightGCN,
     'NGCF': NGCF,
-    'DGCF': DGCF,
     'SGL': SGL,
     'SimGCL': SimGCL
 }
